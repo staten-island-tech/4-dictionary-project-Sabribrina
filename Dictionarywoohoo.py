@@ -30,12 +30,13 @@ for index, item in enumerate(YURI):
 
 cart = []
 purchase = ""
+total_price = sum(item["price"] for item in cart)
 while purchase != "done":
     purchase = input("which yuriful of the yuris for the most yuriful yurier would u like? (type 'done' to finish): ")
     cart.append(purchase)
-if [0, 1, 2]:
-    print("do you wish to continue..")
 if 'done':
-    print("thank you for your patronage..return for more peak...")
+    input("do you wish to continue..")
+if 'yes':
+    input("thank you for your patronage..return for more peak...")
 
-print(item["name"], cart,)
+print(item["name"],total_price, cart)
