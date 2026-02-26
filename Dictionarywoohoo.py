@@ -29,14 +29,25 @@ for index, item in enumerate(YURI):
     print(index, ":", item["name"], item["price"], item["department"], item["description"])
 
 cart = []
+prices = []
 purchase = ""
-total_price = sum(item["price"] for item in cart)
+money = ""
 while purchase != "done":
     purchase = input("which yuriful of the yuris for the most yuriful yurier would u like? (type 'done' to finish): ")
     cart.append(purchase)
+    money = input("GIMME THE COST OF IT BOY (type 'done' to finish): ")
+    prices.append(money)
 if 'done':
-    input("do you wish to continue..")
+    input("do you wish to continue..?")
 if 'yes':
-    input("thank you for your patronage..return for more peak...")
+    input("thank you for your patronage..return for more peak!!")
+if 'no':
+    purchase = input("which yuriful of the yuris for the most yuriful yurier would u like? (type 'done' to finish): ")
+    cart.append(purchase)
+    money = input("GIMME THE COST OF IT BOY")
+    prices.append(money)
 
-print(item["name"],total_price, cart)
+total = sum(prices)
+total += prices
+
+print(cart, total)
