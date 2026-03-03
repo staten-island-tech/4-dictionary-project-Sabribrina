@@ -29,7 +29,7 @@ languages("The red cat sat on the mat. Why are you so sad cat? Don't ask that.")
 languages("Lorsque j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre")
 languages("Si je discernais ta voix encore Connaissant ce coeur qui doute, Tu me dirais de tirer un trait Quoi que partir me coute.") """
 
-def lang (sent):
+""" def lang (sent):
     s = 0
     t = 0
     for i in sent:
@@ -41,24 +41,33 @@ def lang (sent):
         print("French")
     else:
         print("English")
-lang("blah bekjsdh euooi")
+lang("blah bekjsdh euoottttti") """
 
 def honi (line):
     H = 0
     O = 0
     N = 0
     I = 0
-    for i in range (line):
-        if line[i] == "H":
+    current = "H"
+    num = 0
+    for i in range (len(line)):
+        if i == current:
             H += 1
-        if line[i] == "O":
+            current == "O"
+        if i == current:
             O += 1
-        if line[i] == "N":
+            current == "N"
+        if i == current:
             N += 1
-        if line[i] == "I":
+            current == "I"
+        if i == current:
             I += 1
-    print(H,O,N,I)
-    if 
-honi("MAGNUS")
+        if H+O+N+I == 4:
+            num += 1
+        else:
+            num = 0
+    print(num)
+honi("HONI")                               
+""" honi("MAGNUS")
 honi("HHHHOOOONNNNIIII")
-honi("PROHODNIHODNIK")
+honi("PROHODNIHODNIK") """
