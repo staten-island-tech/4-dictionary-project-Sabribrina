@@ -43,7 +43,7 @@ languages("Si je discernais ta voix encore Connaissant ce coeur qui doute, Tu me
         print("English")
 lang("blah bekjsdh euoottttti") """
 
-def honi (line):
+""" def honi (line):
     H = 0
     O = 0
     N = 0
@@ -51,23 +51,48 @@ def honi (line):
     current = "H"
     num = 0
     for i in range (len(line)):
-        if i == current:
+        if line[i] == current:
             H += 1
             current == "O"
-        if i == current:
+        if line[i] == current:
             O += 1
             current == "N"
-        if i == current:
+        if line[i] == current:
             N += 1
             current == "I"
-        if i == current:
+        if line[i] == current:
             I += 1
         if H+O+N+I == 4:
+            H = 0
+            O = 0
+            N = 0
+            I = 0
             num += 1
+            current = "H"
         else:
-            num = 0
+            num == 0
     print(num)
 honi("HONI")                               
-""" honi("MAGNUS")
+honi("MAGNUS")
 honi("HHHHOOOONNNNIIII")
 honi("PROHODNIHODNIK") """
+
+def magnus (word):
+    count = 0
+    state = 0 #tracks letter looking for
+
+    for char in word:
+        if state ==0 and char.upper() == "H":
+            state = 1
+        elif state ==1 and char.upper() == "O":
+            state = 2
+        elif state ==2 and char.upper() == "N":
+            state = 3
+        elif state ==3 and char.upper() == "I":
+            state = 0
+            count += 1
+    print(count)
+magnus("HONI")                               
+magnus("MAGNUS")
+magnus("HHHHOOOONNNNIIII")
+magnus("PROHODNIHODNIK")
