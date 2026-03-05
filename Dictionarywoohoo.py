@@ -39,9 +39,9 @@ while purchase != "done":
     prices.append(money)
 if 'done':
     input("do you wish to continue..?")
-if 'yes':
+elif 'yes':
     input("thank you for your patronage..return for more peak!!")
-if 'no':
+elif 'no':
     purchase = input("which yuriful of the yuris for the most yuriful yurier would u like? (type 'done' to finish): ")
     cart.append(purchase)
     money = input("GIMME THE COST OF IT BOY")

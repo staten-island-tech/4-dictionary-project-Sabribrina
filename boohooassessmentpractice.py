@@ -77,7 +77,7 @@ honi("MAGNUS")
 honi("HHHHOOOONNNNIIII")
 honi("PROHODNIHODNIK") """
 
-def magnus (word):
+""" def magnus (word):
     count = 0
     state = 0 #tracks letter looking for
 
@@ -95,4 +95,13 @@ def magnus (word):
 magnus("HONI")                               
 magnus("MAGNUS")
 magnus("HHHHOOOONNNNIIII")
-magnus("PROHODNIHODNIK")
+magnus("PROHODNIHODNIK") """
+
+def test (num, ans, cor):
+    flowstate= 0
+    for i in range (len(num)):
+        if ans[i] == cor[i]:
+            flowstate +=1
+    print(flowstate)
+test(3, "ABC", "ACB")
+test(3, "AAA", "ABA")
