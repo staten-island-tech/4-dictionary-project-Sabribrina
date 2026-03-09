@@ -97,11 +97,32 @@ magnus("MAGNUS")
 magnus("HHHHOOOONNNNIIII")
 magnus("PROHODNIHODNIK") """
 
-def test (num, ans, cor):
+""" def test (num, ans, cor):
     flowstate= 0
-    for i in range (len(num)):
+    for i in range (len(ans)):
         if ans[i] == cor[i]:
             flowstate +=1
     print(flowstate)
 test(3, "ABC", "ACB")
-test(3, "AAA", "ABA")
+test(3, "AAA", "ABA") """
+
+# test ques I got
+def check_password(password):
+    upper_check = 0
+    lower_check = 0
+    digit_check = 0
+    for char in password:
+        if char.isUpper():
+            upper_check = True
+    if len(password) > 8 and len(password) < 12:
+        if upper_check > 3 and lower_check > 1 and digit_check > 1:
+            print('valid')
+
+# test ques other
+def Tarifa (megabits, number_months, usage):
+    value = 0
+    for use in usage:
+        value += megabits
+        value -= use
+    print(value + megabits)
+Tarifa(10, 3, [4,6,2])
