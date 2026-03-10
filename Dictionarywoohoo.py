@@ -35,7 +35,7 @@ money = ""
 while purchase != "done":
     purchase = input("which yuriful of the yuris for the most yuriful yurier would u like? (type 'done' to finish): ")
     cart.append(purchase)
-    money = float(input("GIMME THE COST OF IT BOY (type 'done' to finish): "))
+    money = float(input("GIMME THE COST OF IT BOY (type '0' to finish): "))
     prices.append(money)
 if 'done':
     input("do you wish to continue..?")
@@ -48,6 +48,5 @@ elif 'no':
     prices.append(money)
 print(cart, prices)
 total = sum(prices)
-total += prices
 
 print(cart, total)
