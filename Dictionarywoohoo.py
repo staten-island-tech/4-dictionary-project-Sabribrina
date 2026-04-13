@@ -25,7 +25,7 @@ print(YURI[1]["name"], YURI[1]["price"], YURI[1]["department"], YURI[1]["descrip
 
 print(YURI[2]["name"], YURI[2]["price"], YURI[2]["department"], YURI[2]["description"]) """
 
-for index, item in enumerate(YURI):
+""" for index, item in enumerate(YURI):
     print(index, ":", item["name"], item["price"], item["department"], item["description"])
 
 cart = []
@@ -49,4 +49,24 @@ elif 'no':
 print(cart, prices)
 total = sum(prices)
 
-print(cart, total)
+print(cart, total) """
+
+for index, item in enumerate(YURI):
+    print(index, ":", item["name"], item["price"], item["department"], item["description"])
+
+cart = []
+purchase = ""
+while purchase != "done":
+    purchase = input("which yuriful of the yuris for the most yuriful yurier would u like? (type 'done' to finish): ")
+    cart.append(
+    print(cart)
+if 'done':
+    input("do you wish to continue..?")
+elif 'yes':
+    input("thank you for your patronage..return for more peak!!")
+elif 'no':
+    purchase = input("which yuriful of the yuris for the most yuriful yurier would u like? (type 'done' to finish): ")
+    cart.append(
+    print(cart)
+
+print(cart)
