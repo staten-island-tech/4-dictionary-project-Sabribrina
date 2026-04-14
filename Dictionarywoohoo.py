@@ -55,18 +55,24 @@ for index, item in enumerate(YURI):
     print(index, ":", item["name"], item["price"], item["department"], item["description"])
 
 cart = []
-purchase = ""
-while purchase != "done":
-    purchase = input("which yuriful of the yuris for the most yuriful yurier would u like? (type 'done' to finish): ")
-    cart.append(
-    print(cart)
-if 'done':
-    input("do you wish to continue..?")
-elif 'yes':
-    input("thank you for your patronage..return for more peak!!")
-elif 'no':
-    purchase = input("which yuriful of the yuris for the most yuriful yurier would u like? (type 'done' to finish): ")
-    cart.append(
-    print(cart)
-
+total = 0
+purchasing = int(input("which yuriful of the yuris for the most yuriful yurier would u like?"))
+cart.append(YURI[purchasing])
 print(cart)
+total += YURI[purchasing]['price']
+
+while True:
+    checkout = input("do you wanna continue to get more yuriful of the yuris??? heuehrui")
+    if checkout == "yes":
+        purchasing = int(input("which other yuriful of the yuris for the most yuriful yurier would u like?"))
+        cart.append(YURI[purchasing])
+        print(cart)
+        total += YURI[purchasing]['price']
+    elif checkout == "no":
+        break
+    else:
+        print("say yes/no")
+
+for item in cart:
+    print(f"{(item['name'])}, ${float(item['price'])}")
+print(f"Total: ${total}")
