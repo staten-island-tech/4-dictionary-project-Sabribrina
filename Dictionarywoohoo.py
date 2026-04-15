@@ -54,25 +54,25 @@ print(cart, total) """
 for index, item in enumerate(YURI):
     print(index, ":", item["name"], item["price"], item["department"], item["description"])
 
-cart = []
-total = 0
-purchasing = int(input("which yuriful of the yuris for the most yuriful yurier would u like?"))
-cart.append(YURI[purchasing])
-print(cart)
-total += YURI[purchasing]['price']
+cart = [] #list for items being purchased
+total = 0 #for add all prices of items together
+purchasing = int(input("which yuriful of the yuris for the most yuriful yurier would u like?")) #ask user for which item they want
+cart.append(YURI[purchasing]) #add the WHOLE thing to cart
+print(cart) #prints items in cart
+total += YURI[purchasing]['price'] #separate part to calc total of things
 
 while True:
-    checkout = input("do you wanna continue to get more yuriful of the yuris??? heuehrui")
-    if checkout == "yes":
-        purchasing = int(input("which other yuriful of the yuris for the most yuriful yurier would u like?"))
-        cart.append(YURI[purchasing])
-        print(cart)
-        total += YURI[purchasing]['price']
-    elif checkout == "no":
-        break
+    checkout = input("do you wanna continue to get more yuriful of the yuris??? heuehrui") #ask if user wants to buy more
+    if checkout == "yes": #when receiving a confirmation for more...
+        purchasing = int(input("which other yuriful of the yuris for the most yuriful yurier would u like?")) #ask again
+        cart.append(YURI[purchasing]) #add the WHOLE thing to cart
+        print(cart) #prints items in cart
+        total += YURI[purchasing]['price'] #separate part to calc total of things
+    elif checkout == "no": #when NOT wanting more
+        break #ends while loop
     else:
-        print("say yes/no")
+        print("say yes/no") #response to checkout input question
 
 for item in cart:
-    print(f"{(item['name'])}, ${float(item['price'])}")
-print(f"Total: ${total}")
+    print(f"{(item['name'])}, ${float(item['price'])}") #f strings to print ONLY the items name and price from cart
+print(f"Total: ${total}") #prints total amount of money needed to purchase items
